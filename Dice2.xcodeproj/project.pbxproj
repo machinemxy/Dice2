@@ -13,10 +13,12 @@
 		220904C2249B9F19003C8714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220904C1249B9F19003C8714 /* Assets.xcassets */; };
 		220904C5249B9F19003C8714 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220904C4249B9F19003C8714 /* Preview Assets.xcassets */; };
 		220904C8249B9F19003C8714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220904C6249B9F19003C8714 /* LaunchScreen.storyboard */; };
+		220904D0249BA421003C8714 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220904CF249BA421003C8714 /* Setting.swift */; };
+		220904D2249BA6E6003C8714 /* RollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220904D1249BA6E6003C8714 /* RollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		220904B8249B9F18003C8714 /* Dice2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		220904B8249B9F18003C8714 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220904BB249B9F18003C8714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220904BD249B9F18003C8714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		220904BF249B9F18003C8714 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		220904C4249B9F19003C8714 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		220904C7249B9F19003C8714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		220904C9249B9F19003C8714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		220904CF249BA421003C8714 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		220904D1249BA6E6003C8714 /* RollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 		220904B9249B9F18003C8714 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				220904B8249B9F18003C8714 /* Dice2.app */,
+				220904B8249B9F18003C8714 /* Dice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +63,8 @@
 				220904BB249B9F18003C8714 /* AppDelegate.swift */,
 				220904BD249B9F18003C8714 /* SceneDelegate.swift */,
 				220904BF249B9F18003C8714 /* ContentView.swift */,
+				220904D1249BA6E6003C8714 /* RollView.swift */,
+				220904CF249BA421003C8714 /* Setting.swift */,
 				220904C1249B9F19003C8714 /* Assets.xcassets */,
 				220904C6249B9F19003C8714 /* LaunchScreen.storyboard */,
 				220904C9249B9F19003C8714 /* Info.plist */,
@@ -92,7 +98,7 @@
 			);
 			name = Dice2;
 			productName = Dice2;
-			productReference = 220904B8249B9F18003C8714 /* Dice2.app */;
+			productReference = 220904B8249B9F18003C8714 /* Dice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,6 +154,8 @@
 			files = (
 				220904BC249B9F18003C8714 /* AppDelegate.swift in Sources */,
 				220904BE249B9F18003C8714 /* SceneDelegate.swift in Sources */,
+				220904D2249BA6E6003C8714 /* RollView.swift in Sources */,
+				220904D0249BA421003C8714 /* Setting.swift in Sources */,
 				220904C0249B9F18003C8714 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.Dice2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dice;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.Dice2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dice;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var setting = Setting()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            Form {
+                Section(header: Text("Dice Sides")) {
+                    Picker("", selection: $setting.sidesId) {
+                        ForEach(0 ..< Setting.sidesOptions.count) {
+                            Text("\(Setting.sidesOptions[$0])")
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Section(header: Text("Dice Amount")) {
+                    Stepper(value: $setting.dices, in: 1...5) {
+                        Text("\(setting.dices)")
+                    }
+                }
+            }
+            .navigationBarItems(trailing: NavigationLink(destination: RollView(setting: $setting), label: {
+                Text("Done")
+            }))
+            .navigationBarTitle("Setting", displayMode: .inline)
+        }
     }
 }
 
