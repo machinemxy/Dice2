@@ -32,7 +32,7 @@ struct ContentView: View {
                 Text("Done")
             }))
             .navigationBarTitle("Setting", displayMode: .inline)
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

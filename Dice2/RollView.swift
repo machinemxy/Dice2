@@ -22,6 +22,18 @@ struct RollView: View {
     
     var body: some View {
         VStack {
+            GeometryReader { geo in
+                ZStack {
+                    ForEach(0..<self.setting.dices) { i in
+                        Image(systemName: self.diceImageNames[i])
+                            .resizable()
+                            .frame(width: self.diceSizes[i], height: self.diceSizes[i])
+                            .offset(x: geo.size.width * self.diceOffsetXs[i], y: geo.size.height * self.diceOffsetYs[i])
+                            .rotationEffect(.degrees(self.diceDegrees[i]))
+                    }
+                }
+            }
+            
             HStack {
                 Text(diceResult).font(.title).padding([.top, .leading], 8.0)
                 Spacer()
@@ -35,19 +47,9 @@ struct RollView: View {
                 }
             }) {
                 Text(diceRolled ? "Reset" : "Roll")
-            }.font(.largeTitle).padding(.top, 8)
-            
-            GeometryReader { geo in
-                ZStack {
-                    ForEach(0..<self.setting.dices) { i in
-                        Image(systemName: self.diceImageNames[i])
-                            .resizable()
-                            .frame(width: self.diceSizes[i], height: self.diceSizes[i])
-                            .offset(x: geo.size.width * self.diceOffsetXs[i], y: geo.size.height * self.diceOffsetYs[i])
-                            .rotationEffect(.degrees(self.diceDegrees[i]))
-                    }
-                }
             }
+            .font(.largeTitle).padding([.top, .bottom], 8)
+            
         }
         .navigationBarTitle("Dice", displayMode: .inline)
         .onAppear {
