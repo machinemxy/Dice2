@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Dice2
+
+  Created by Ma Xueyuan on 2020/06/19.
+  Copyright © 2020 Ma Xueyuan. All rights reserved.
+*/
+"Dice Sides" = "面";
+"Dice Amount" = "サイコロ個数";
+"Done" = "完了";
+"Setting" = "設定";
+"Result:" = "出目:";
+"Reset" = "リセット";
+"Roll" = "ロール";
+"Dice" = "サイコロ";

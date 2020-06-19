@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Dice Sides")) {
+                Section(header: Text("Dice Sides".localized())) {
                     Picker("", selection: $setting.sidesId) {
                         ForEach(0 ..< Setting.sidesOptions.count) {
                             Text("\(Setting.sidesOptions[$0])")
@@ -22,16 +22,16 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                 }
                 
-                Section(header: Text("Dice Amount")) {
+                Section(header: Text("Dice Amount".localized())) {
                     Stepper(value: $setting.dices, in: 1...5) {
                         Text("\(setting.dices)")
                     }
                 }
             }
             .navigationBarItems(trailing: NavigationLink(destination: RollView(setting: $setting), label: {
-                Text("Done")
+                Text("Done".localized())
             }))
-            .navigationBarTitle("Setting", displayMode: .inline)
+            .navigationBarTitle(Text("Setting".localized()), displayMode: .inline)
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

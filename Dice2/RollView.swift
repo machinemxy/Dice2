@@ -17,7 +17,7 @@ struct RollView: View {
     @State private var diceOffsetXs = Array.init(repeating: CGFloat(0), count: 5)
     @State private var diceOffsetYs = Array.init(repeating: CGFloat(0), count: 5)
     @State private var diceDegrees = Array.init(repeating: Double(0), count: 5)
-    @State private var diceResult = "Result:"
+    @State private var diceResult = "Result:".localized()
     @State private var feedback = UINotificationFeedbackGenerator()
     
     var body: some View {
@@ -46,12 +46,12 @@ struct RollView: View {
                     self.roll()
                 }
             }) {
-                Text(diceRolled ? "Reset" : "Roll")
+                Text(diceRolled ? "Reset".localized() : "Roll".localized())
             }
             .font(.largeTitle).padding([.top, .bottom], 8)
             
         }
-        .navigationBarTitle("Dice", displayMode: .inline)
+        .navigationBarTitle(Text("Dice".localized()), displayMode: .inline)
         .onAppear {
             self.feedback.prepare()
             self.setting.save()
@@ -59,7 +59,7 @@ struct RollView: View {
     }
     
     func roll() {
-        var resultTemp = "Result:"
+        var resultTemp = "Result:".localized()
         
         withAnimation {
             for i in 0..<self.setting.dices {
@@ -90,7 +90,7 @@ struct RollView: View {
             }
         }
         
-        diceResult = "Result:"
+        diceResult = "Result:".localized()
         diceRolled = false
     }
 }
