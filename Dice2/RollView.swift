@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct RollView: View {
     @Binding var setting: Setting
@@ -19,6 +20,7 @@ struct RollView: View {
     @State private var diceDegrees = Array.init(repeating: Double(0), count: 5)
     @State private var diceResult = "Result:".localized()
     @State private var feedback = UINotificationFeedbackGenerator()
+    @State private var times = 0
     
     var body: some View {
         VStack {
@@ -92,6 +94,11 @@ struct RollView: View {
         
         diceResult = "Result:".localized()
         diceRolled = false
+        
+        times += 1
+        if times == 10 {
+            SKStoreReviewController.requestReview()
+        }
     }
 }
 
