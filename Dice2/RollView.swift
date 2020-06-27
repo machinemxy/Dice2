@@ -15,8 +15,7 @@ struct RollView: View {
     @State private var diceRolled = false
     @State private var diceImageNames = Array.init(repeating: "square", count: 5)
     @State private var diceSizes = Array.init(repeating: CGFloat(200), count: 5)
-    @State private var diceOffsetXs = Array.init(repeating: CGFloat(0), count: 5)
-    @State private var diceOffsetYs = Array.init(repeating: CGFloat(0), count: 5)
+    @State private var diceOffsets = Array.init(repeating: CGFloat(0), count: 5)
     @State private var diceDegrees = Array.init(repeating: Double(0), count: 5)
     @State private var diceResult = "Result:".localized()
     @State private var feedback = UINotificationFeedbackGenerator()
@@ -30,7 +29,7 @@ struct RollView: View {
                         Image(systemName: self.diceImageNames[i])
                             .resizable()
                             .frame(width: self.diceSizes[i], height: self.diceSizes[i])
-                            .offset(x: geo.size.width * self.diceOffsetXs[i], y: geo.size.height * self.diceOffsetYs[i])
+                            .offset(x: CGFloat.minimum(geo.size.width, geo.size.height) * self.diceOffsets[i], y: 0)
                             .rotationEffect(.degrees(self.diceDegrees[i]))
                     }
                 }
@@ -69,8 +68,7 @@ struct RollView: View {
                 resultTemp.append(" \(point)")
                 diceImageNames[i] = "\(point).square"
                 diceSizes[i] = 50
-                diceOffsetXs[i] = CGFloat.random(in: -0.3...0.3)
-                diceOffsetYs[i] = CGFloat.random(in: -0.3...0.3)
+                diceOffsets[i] = CGFloat.random(in: -0.4...0.4)
                 diceDegrees[i] = Double.random(in: -180...180)
             }
         }
@@ -86,8 +84,7 @@ struct RollView: View {
             for i in 0..<self.setting.dices {
                 diceImageNames[i] = "square"
                 diceSizes[i] = 200
-                diceOffsetXs[i] = 0
-                diceOffsetYs[i] = 0
+                diceOffsets[i] = 0
                 diceDegrees[i] = 0
             }
         }
