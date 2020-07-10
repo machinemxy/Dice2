@@ -32,7 +32,7 @@ struct RollView: View {
                             .offset(x: CGFloat.minimum(geo.size.width, geo.size.height) * self.diceOffsets[i], y: 0)
                             .rotationEffect(.degrees(self.diceDegrees[i]))
                     }
-                }
+                }.frame(width: geo.size.width, height: geo.size.height)
             }
             
             HStack {
