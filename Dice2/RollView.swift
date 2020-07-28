@@ -47,12 +47,12 @@ struct RollView: View {
                     self.roll()
                 }
             }) {
-                Text(diceRolled ? "Reset".localized() : "Roll".localized())
+                Text(diceRolled ? "Reset" : "Roll")
             }
             .font(.largeTitle).padding([.top, .bottom], 8)
             
         }
-        .navigationBarTitle(Text("Dice".localized()), displayMode: .inline)
+        .navigationBarTitle(Text("Dice"), displayMode: .inline)
         .onAppear {
             self.feedback.prepare()
             self.setting.save()

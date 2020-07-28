@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,11 @@
 		220904C8249B9F19003C8714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220904C6249B9F19003C8714 /* LaunchScreen.storyboard */; };
 		220904D0249BA421003C8714 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220904CF249BA421003C8714 /* Setting.swift */; };
 		220904D2249BA6E6003C8714 /* RollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220904D1249BA6E6003C8714 /* RollView.swift */; };
+		226E063224CFFD46008D2453 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 226E063124CFFD46008D2453 /* SwiftyStoreKit */; };
+		226E063424CFFF12008D2453 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E063324CFFF12008D2453 /* Key.swift */; };
+		226E063624D00652008D2453 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E063524D00652008D2453 /* PurchaseView.swift */; };
+		226E063824D007D4008D2453 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E063724D007D4008D2453 /* StringExt.swift */; };
 		22BEC525249CD1CF00800DBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22BEC527249CD1CF00800DBD /* Localizable.strings */; };
-		22BEC52A249CD1ED00800DBD /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEC529249CD1ED00800DBD /* StringExt.swift */; };
 		22BEC52D249CD9E100800DBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22BEC52F249CD9E100800DBD /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +34,13 @@
 		220904C9249B9F19003C8714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		220904CF249BA421003C8714 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		220904D1249BA6E6003C8714 /* RollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollView.swift; sourceTree = "<group>"; };
+		226E063324CFFF12008D2453 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		226E063524D00652008D2453 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		226E063724D007D4008D2453 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		227C8EA524A77309007C1AE9 /* Dice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dice.entitlements; sourceTree = "<group>"; };
 		22BEC522249CD16300800DBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		22BEC526249CD1CF00800DBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22BEC528249CD1D400800DBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		22BEC529249CD1ED00800DBD /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		22BEC52E249CD9E100800DBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22BEC530249CD9E500800DBD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226E063224CFFD46008D2453 /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +81,10 @@
 				220904BD249B9F18003C8714 /* SceneDelegate.swift */,
 				220904BF249B9F18003C8714 /* ContentView.swift */,
 				220904D1249BA6E6003C8714 /* RollView.swift */,
+				226E063524D00652008D2453 /* PurchaseView.swift */,
 				220904CF249BA421003C8714 /* Setting.swift */,
-				22BEC529249CD1ED00800DBD /* StringExt.swift */,
+				226E063324CFFF12008D2453 /* Key.swift */,
+				226E063724D007D4008D2453 /* StringExt.swift */,
 				220904C1249B9F19003C8714 /* Assets.xcassets */,
 				220904C6249B9F19003C8714 /* LaunchScreen.storyboard */,
 				220904C9249B9F19003C8714 /* Info.plist */,
@@ -111,6 +119,9 @@
 			dependencies = (
 			);
 			name = Dice2;
+			packageProductDependencies = (
+				226E063124CFFD46008D2453 /* SwiftyStoreKit */,
+			);
 			productName = Dice2;
 			productReference = 220904B8249B9F18003C8714 /* Dice.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +151,9 @@
 				ja,
 			);
 			mainGroup = 220904AF249B9F18003C8714;
+			packageReferences = (
+				226E063024CFFD46008D2453 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+			);
 			productRefGroup = 220904B9249B9F18003C8714 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,11 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226E063424CFFF12008D2453 /* Key.swift in Sources */,
 				220904BC249B9F18003C8714 /* AppDelegate.swift in Sources */,
+				226E063824D007D4008D2453 /* StringExt.swift in Sources */,
 				220904BE249B9F18003C8714 /* SceneDelegate.swift in Sources */,
+				226E063624D00652008D2453 /* PurchaseView.swift in Sources */,
 				220904D2249BA6E6003C8714 /* RollView.swift in Sources */,
 				220904D0249BA421003C8714 /* Setting.swift in Sources */,
-				22BEC52A249CD1ED00800DBD /* StringExt.swift in Sources */,
 				220904C0249B9F18003C8714 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		226E063024CFFD46008D2453 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		226E063124CFFD46008D2453 /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 226E063024CFFD46008D2453 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 220904B0249B9F18003C8714 /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  StringExt.swift
+//  Key.swift
 //  Dice2
 //
 //  Created by Ma Xueyuan on 2020/07/28.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension String {
-    func localized() -> String {
-        return NSLocalizedString(self, comment: "")
-    }
+enum Key {
+    static let setting = "setting"
+    static let paid = "paid"
+    static let purchaseId = "colorfulDice"
 }

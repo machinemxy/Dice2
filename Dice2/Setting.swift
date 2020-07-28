@@ -17,7 +17,7 @@ struct Setting: Codable {
     var dices: Int
     
     init() {
-        if let data = UserDefaults.standard.data(forKey: "setting")
+        if let data = UserDefaults.standard.data(forKey: Key.setting)
         {
             let decoder = JSONDecoder()
             
@@ -35,7 +35,7 @@ struct Setting: Codable {
         let encoder = JSONEncoder()
         
         if let encoded = try? encoder.encode(self) {
-            UserDefaults.standard.set(encoded, forKey: "setting")
+            UserDefaults.standard.set(encoded, forKey: Key.setting)
             print("saved")
         }
     }
