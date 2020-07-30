@@ -18,6 +18,10 @@ struct PurchaseView: View {
     
     var body: some View {
         VStack {
+            Image("colorful")
+                .resizable()
+                .scaledToFit()
+            
             Text("After purchasing colorful dice you can set dice to your lucky color. It's cool!").padding()
             
             Button(purchaseString) {
