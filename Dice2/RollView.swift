@@ -28,6 +28,7 @@ struct RollView: View {
                     ForEach(0..<self.setting.dices) { i in
                         Image(systemName: self.diceImageNames[i])
                             .resizable()
+                            .foregroundColor(Setting.colors[self.setting.color])
                             .frame(width: self.diceSizes[i], height: self.diceSizes[i])
                             .offset(x: CGFloat.minimum(geo.size.width, geo.size.height) * self.diceOffsets[i], y: 0)
                             .rotationEffect(.degrees(self.diceDegrees[i]))

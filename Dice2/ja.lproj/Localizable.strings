@@ -15,3 +15,10 @@
 "Roll" = "ロール";
 "Dice" = "サイコロ";
 "Purchase colorful dice" = "多彩なサイコロを購入する";
+"After purchasing colorful dice you can set dice to your lucky color. It's cool!" = "多彩なサイコロを購入すると、サイコロを自分の幸運色に設定することができる。これはめっちゃクールだ！";
+"Purchase" = "購入";
+"PurchaseFormat" = "%@で多彩なサイコロを購入する";
+"Restore purchase" = "以前の購入を再取得";
+"Purchase failed" = "購入失敗";
+"Restore failed" = "再取得失敗";
+"Color" = "色";

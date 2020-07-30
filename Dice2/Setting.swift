@@ -6,15 +6,25 @@
 //  Copyright © 2020 Ma Xueyuan. All rights reserved.
 //
 
-import Foundation
-
-import Foundation
+import SwiftUI
 
 struct Setting: Codable {
     static let sidesOptions = [4, 6, 8, 10, 12, 20]
+    static let colors: [String: Color] = [
+        "Default": .primary,
+        "Red": .red,
+        "Green": .green,
+        "Blue": .blue,
+        "Yellow": .yellow,
+        "Pink": .pink,
+        "Gray": .gray,
+        "Orange": .orange,
+        "Purple": .purple
+    ]
     
     var sidesId: Int
     var dices: Int
+    var color: String
     
     init() {
         if let data = UserDefaults.standard.data(forKey: Key.setting)
@@ -29,6 +39,7 @@ struct Setting: Codable {
         
         sidesId = 1
         dices = 1
+        color = "Default"
     }
     
     func save() {
@@ -36,7 +47,6 @@ struct Setting: Codable {
         
         if let encoded = try? encoder.encode(self) {
             UserDefaults.standard.set(encoded, forKey: Key.setting)
-            print("saved")
         }
     }
     

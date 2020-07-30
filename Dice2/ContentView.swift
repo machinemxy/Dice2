@@ -31,9 +31,13 @@ struct ContentView: View {
                 
                 Section(header: Text("Dice Color")) {
                     if paid {
-                        Text("Paid")
+                        Picker("Color", selection: $setting.color) {
+                            ForEach(Setting.colors.keys.sorted(), id: \.self) { key in
+                                Text(key).foregroundColor(Setting.colors[key])
+                            }
+                        }
                     } else {
-                        NavigationLink(destination: PurchaseView()) {
+                        NavigationLink(destination: PurchaseView(paid: $paid)) {
                             Text("Purchase colorful dice")
                         }
                     }

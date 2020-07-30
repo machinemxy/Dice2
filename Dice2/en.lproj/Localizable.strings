@@ -15,3 +15,10 @@
 "Roll" = "Roll";
 "Dice" = "Dice";
 "Purchase colorful dice" = "Purchase colorful dice";
+"After purchasing colorful dice you can set dice to your lucky color. It's cool!" = "After purchasing colorful dice you can set dice to your lucky color. It's cool!";
+"Purchase" = "Purchase";
+"PurchaseFormat" = "Purchase colorful dice by %@";
+"Restore purchase" = "Restore purchase";
+"Purchase failed" = "Purchase failed";
+"Restore failed" = "Restore failed";
+"Color" = "Color";
