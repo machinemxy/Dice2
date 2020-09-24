@@ -22,7 +22,12 @@ struct PurchaseView: View {
                 .resizable()
                 .scaledToFit()
             
-            Text("After purchasing colorful dice you can set dice to your lucky color. It's cool!").padding()
+            Text("After purchasing colorful dice you can set dice to several colors. It's cool!").padding()
+            
+            Text("Purchase may take some time to finish. Please wait patiently until the success message is showed.")
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .padding()
             
             Button(purchaseString) {
                 SwiftyStoreKit.purchaseProduct(Key.purchaseId) { (result) in

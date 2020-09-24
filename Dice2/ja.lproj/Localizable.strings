@@ -15,10 +15,11 @@
 "Roll" = "ロール";
 "Dice" = "サイコロ";
 "Purchase colorful dice" = "多彩なサイコロを購入する";
-"After purchasing colorful dice you can set dice to your lucky color. It's cool!" = "多彩なサイコロを購入すると、サイコロを自分の幸運色に設定することができる。これはめっちゃクールだ！";
+"After purchasing colorful dice you can set dice to several colors. It's cool!" = "多彩なサイコロを購入すると、サイコロの色が設定できる。これはめっちゃクールだ！";
 "Purchase" = "購入";
 "PurchaseFormat" = "%@で多彩なサイコロを購入する";
 "Restore purchase" = "以前の購入を再取得";
 "Purchase failed" = "購入失敗";
 "Restore failed" = "再取得失敗";
 "Color" = "色";
+"Purchase may take some time to finish. Please wait patiently until the success message is showed." = "購入完成まで時間がかかることがあります。成功メッセージ表示までごゆっくり待ちなさい。";
